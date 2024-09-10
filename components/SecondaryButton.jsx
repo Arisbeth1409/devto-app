@@ -3,12 +3,17 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function SecondaryButton({ iconButton, text, underline }) {
+export default function SecondaryButton({
+  iconButton,
+  text,
+  underline,
+  justify,
+}) {
   return (
     <Link
       href="/"
       className={clsx(
-        "flex items-center h-[40px] text-[17px] justify-start rounded-[5px] text-[#404040] p-[9px] hover:bg-[#e2e1f3] hover:text-[#2f3ab2] hover:border-[#2f3ab2]",
+        `flex items-center h-[40px] text-[17px] ${justify} rounded-[5px] text-[#404040] p-[9px] hover:bg-[#e2e1f3] hover:text-[#2f3ab2] hover:border-[#2f3ab2]`,
         {
           "hover:underline decoration-solid": underline,
         }
