@@ -1,0 +1,30 @@
+[
+  {
+    "loginButtons": [
+      {
+        "text": "Continue with Apple",
+        "icon": "icons/icon-apple.svg"
+      },
+      {
+        "text": "Continue with Facebook",
+        "icon": "icons/icon-facebook.svg"
+      },
+      {
+        "text": "Continue with Forem",
+        "icon": "icons/icon-forem.svg"
+      },
+      {
+        "text": "Continue with GitHub",
+        "icon": "icons/icon-github.svg"
+      },
+      {
+        "text": "Continue with Google",
+        "icon": "icons/icon-google.svg"
+      },
+      {
+        "text": "Continue with Twitter (X)",
+        "icon": "icons/icon-twitter.svg"
+      }
+    ]
+  }
+]
