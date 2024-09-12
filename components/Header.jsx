@@ -149,7 +149,7 @@ export default function Header() {
                 text="
             Create account
           "
-                href="/"
+                href="/new-user"
                 underline={true}
               />
             </>

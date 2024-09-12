@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 
 import DefaulImage from "@/public/default_user.png";
 import SecondaryButton from "./SecondaryButton";
@@ -16,12 +15,10 @@ export default function Avatar({ user }) {
         }}
         className="rounded-full border-2 border-transparent hover:border-indigo-500/50"
       >
-        <Image
-          className="rounded-full"
+        <img
+          className="rounded-full w-[30px] h-[30px]"
           src={profilePic || DefaulImage}
           alt="user-image"
-          width={30}
-          height={30}
         />
       </button>
       {showDataUser && (
