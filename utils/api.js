@@ -18,3 +18,15 @@ export async function getUser(id) {
   const data = await response.json();
   return data.data.user;
 }
+
+export async function getAllPost() {
+  const response = await fetch(`${API_URL}/posts`);
+  const data = await response.json();
+  return data.data.posts;
+}
+
+export async function getPost(id) {
+  const response = await fetch(`${API_URL}/posts/${id}`);
+  const data = await response.json();
+  return data.data.post;
+}
