@@ -1,7 +1,8 @@
+import MainLayout from "@/Layouts/MainLayout";
 export default function Home() {
   return (
-    <div>
-      <h1 className="bold">Home</h1>
-    </div>
+    <MainLayout>
+      <h1>Hme</h1>
+    </MainLayout>
   );
 }

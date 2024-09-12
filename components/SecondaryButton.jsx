@@ -8,10 +8,11 @@ export default function SecondaryButton({
   text,
   underline,
   justify,
+  href,
 }) {
   return (
     <Link
-      href="/"
+      href={href}
       className={clsx(
         `flex items-center h-[40px] text-[17px] ${justify} rounded-[5px] text-[#404040] p-[9px] hover:bg-[#e2e1f3] hover:text-[#2f3ab2] hover:border-[#2f3ab2]`,
         {

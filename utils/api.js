@@ -10,5 +10,11 @@ export async function login(email, password) {
   });
 
   const data = await response.json();
-  return data.data.token;
+  return data.data;
+}
+
+export async function getUser(id) {
+  const response = await fetch(`${API_URL}/users/${id}`);
+  const data = await response.json();
+  return data.data.user;
 }

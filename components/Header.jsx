@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import Link from "next/link";
 
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
+import UserComponent from "./UserComponent";
 
 import Image from "next/image";
 import logo from "@/public/devto_logo.png";
 
 export default function Header() {
   const [menuMobile, setMenuMobile] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { handleSubmit, register } = useForm();
 
   function onSubmit(data) {
@@ -18,6 +21,11 @@ export default function Header() {
   function handeShowMenu() {
     setMenuMobile(!menuMobile);
   }
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) setIsLoggedIn(true);
+  }, []);
 
   return (
     <>
@@ -40,13 +48,16 @@ export default function Header() {
               />
             </svg>
           </button>
-          <Image
-            className="pr-2"
-            src={logo}
-            alt="Devto"
-            width={60}
-            height={40}
-          />
+          <Link href="/">
+            <Image
+              className="pr-2"
+              src={logo}
+              alt="Devto"
+              width={60}
+              height={40}
+            />
+          </Link>
+
           <form
             className="hidden md:block w-full"
             onSubmit={handleSubmit(onSubmit)}
@@ -96,43 +107,53 @@ export default function Header() {
             </div>
           </form>
         </div>
-        <div className="w-full flex justify-end gap-2">
-          <PrimaryButton
-            text="
-            Create post
-          "
-            to="/"
-            underline={true}
-          />
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+        <div className="w-full flex items-center justify-end gap-2">
+          {isLoggedIn && (
+            <>
+              <PrimaryButton
+                text="
+           Create post
+         "
+                href="/"
+                underline={true}
               />
-            </svg>
-          </button>
-          <SecondaryButton
-            className="w-[76px]"
-            text="Log in"
-            underline={true}
-            justify="justify-center"
-          />
-          <PrimaryButton
-            text="
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+                  />
+                </svg>
+              </button>
+              <UserComponent />
+            </>
+          )}
+          {!isLoggedIn && (
+            <>
+              <SecondaryButton
+                className="w-[76px]"
+                text="Log in"
+                underline={true}
+                justify="justify-center"
+                href="/login"
+              />
+              <PrimaryButton
+                text="
             Create account
           "
-            to="/"
-            underline={true}
-          />
+                href="/"
+                underline={true}
+              />
+            </>
+          )}
         </div>
       </header>
     </>

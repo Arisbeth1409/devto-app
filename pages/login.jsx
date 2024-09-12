@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 
 import { login } from "@/utils/api";
 import logo from "@/public/devto_logo.png";
@@ -25,7 +26,8 @@ export default function Login() {
       setIsSubmitting(true);
       const token = await login(data.email, data.password);
       if (token) {
-        localStorage.setItem("token", token);
+        localStorage.setItem("token", token.token);
+        localStorage.setItem("user", token.user);
         router.push("/");
         setIsSubmitting(false);
         return;
@@ -50,7 +52,9 @@ export default function Login() {
 
   return (
     <main className="mt-10 mb-12 max-w-[544px] p-4 sm:p-[0px] flex justify-center  flex-col items-center mx-auto pt-9">
-      <Image className="pr-2" src={logo} alt="Devto" width={70} height={50} />
+      <Link href="/">
+        <Image className="pr-2" src={logo} alt="Devto" width={70} height={50} />
+      </Link>
       <h1 className="bold text-[2rem] mt-4">Join the DEV Community</h1>
       <p className="text-[#404040] text-center">
         DEV Community is a community of 2,033,865 amazing developers
