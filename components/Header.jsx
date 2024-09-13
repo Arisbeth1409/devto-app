@@ -8,11 +8,12 @@ import UserComponent from "./UserComponent";
 
 import Image from "next/image";
 import logo from "@/public/devto_logo.png";
+import { useIsLoggedIn } from "@/hooks";
 
 export default function Header() {
   const [menuMobile, setMenuMobile] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { handleSubmit, register } = useForm();
+  const { isLoggedIn } = useIsLoggedIn();
 
   function onSubmit(data) {
     console.log(data);
@@ -22,15 +23,10 @@ export default function Header() {
     setMenuMobile(!menuMobile);
   }
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) setIsLoggedIn(true);
-  }, []);
-
   return (
     <>
       {menuMobile && <div>Mobile Menu</div>}
-      <header className="fixed top-0  flex pl-6 pr-6 items-center w-full h-[56px] bg-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.10)]">
+      <header className="fixed top-0  flex pl-9 pr-9 items-center w-full h-[56px] bg-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.10)]">
         <div className="w-full flex items-center gap-3">
           <button onClick={handeShowMenu} className="block md:hidden h-[56px]">
             <svg

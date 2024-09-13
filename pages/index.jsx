@@ -2,11 +2,25 @@ import MainLayout from "@/Layouts/MainLayout";
 import { getAllPost } from "@/utils/api";
 import Post from "@/components/Post";
 
+import NavLinks from "@/components/NavLinks";
+import SocialNetworks from "@/components/SocialNetwork";
+import MyTags from "@/components/MyTags";
+import LoginNav from "@/components/LoginNav";
+import { useIsLoggedIn } from "@/hooks";
+
 export default function Home({ posts }) {
+  const { isLoggedIn } = useIsLoggedIn();
+
   return (
     <MainLayout>
       <div className="flex w-full pt-[75px] gap-3">
-        <aside className="basis-1/4 hidden md:block">01</aside>
+        <aside className="basis-1/4 hidden md:block">
+          {!isLoggedIn && <LoginNav />}
+          <NavLinks navLinks={true} />
+          <NavLinks />
+          <SocialNetworks />
+          <MyTags />
+        </aside>
         <main className="basis-5/5 sm:basis-3/5 flex flex-col gap-2">
           {posts.map((post, index) => {
             return (

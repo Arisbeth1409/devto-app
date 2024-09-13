@@ -25,6 +25,176 @@
         "text": "Continue with Twitter (X)",
         "icon": "icons/icon-twitter.svg"
       }
+    ],
+    "navButtons": [
+      {
+        "text": "Home",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-home.svg"
+      },
+      {
+        "text": "DEV ++",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-dev-plus.svg"
+      },
+      {
+        "text": "Reading List",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-reading.svg"
+      },
+      {
+        "text": "Podcasts",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-podcast.svg"
+      },
+      {
+        "text": "Videos",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-videos.svg"
+      },
+      {
+        "text": "Tags",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-tags.svg"
+      },
+      {
+        "text": "DEV Help",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-help.svg"
+      },
+      {
+        "text": "Forem Shop",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-shop.svg"
+      },
+      {
+        "text": "Advertise on DEV",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-heart.svg"
+      },
+      {
+        "text": "DEV Challengues",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-challenge.svg"
+      },
+      {
+        "text": "DEV Showcase",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-stars.svg"
+      },
+      {
+        "text": "About",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-devto.svg"
+      },
+      {
+        "text": "Contact",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-contact.svg"
+      },
+      {
+        "text": "Guides",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-book.svg"
+      },
+      {
+        "text": "Software comparisons",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-software.svg"
+      }
+    ],
+    "navButtonsOther": [
+      {
+        "text": "Code of Conduct",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-conduct.svg"
+      },
+      {
+        "text": "Privacy Policy",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-privacy.svg"
+      },
+      {
+        "text": "Terms of use",
+        "underline": true,
+        "to": "/",
+        "icon": "icons/icon-terms.svg"
+      }
+    ],
+    "navButtonsSocialNetwork": [
+      {
+        "text": "",
+        "underline": false,
+        "to": "/",
+        "icon": "icons/icon-twitter.svg"
+      },
+      {
+        "text": "",
+        "underline": false,
+        "to": "/",
+        "icon": "icons/icon-facebook.svg"
+      },
+      {
+        "text": "",
+        "underline": false,
+        "to": "/",
+        "icon": "icons/icon-github.svg"
+      },
+      {
+        "text": "",
+        "underline": false,
+        "to": "/",
+        "icon": "icons/icon-ig.svg"
+      },
+      {
+        "text": "",
+        "underline": false,
+        "to": "/",
+        "icon": "icons/icon-tch.svg"
+      },
+      {
+        "text": "",
+        "underline": false,
+        "to": "/",
+        "icon": "icons/icon-m.svg"
+      }
+    ],
+    "myTags": [
+      {
+        "text": "#webdev"
+      },
+      {
+        "text": "#css"
+      },
+      {
+        "text": "#react"
+      },
+      {
+        "text": "#bash"
+      },
+      {
+        "text": "#python"
+      },
+      {
+        "text": "#testing"
+      }
     ]
   }
 ]

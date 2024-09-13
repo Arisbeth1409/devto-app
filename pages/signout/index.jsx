@@ -1,24 +1,16 @@
-import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import MainLayout from "@/Layouts/MainLayout";
+import { useIsLoggedIn } from "@/hooks";
 
 export default function SignOut() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (token) {
-      setIsLoggedIn(true);
-    }
-  }, []);
+  const { isLoggedIn } = useIsLoggedIn();
 
   function handleLoginLogout() {
     if (isLoggedIn) {
       localStorage.removeItem("token");
-      setIsLoggedIn(false);
+      localStorage.removeItem("user");
       router.push("/login");
     }
 
