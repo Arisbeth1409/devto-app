@@ -110,7 +110,7 @@ export default function Header() {
                 text="
            Create post
          "
-                href="/"
+                href="/publications/create"
                 underline={true}
               />
               <button>

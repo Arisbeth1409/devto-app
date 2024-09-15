@@ -30,3 +30,22 @@ export async function getPost(id) {
   const data = await response.json();
   return data.data.post;
 }
+
+export async function userRegister(
+  name,
+  userName,
+  password,
+  email,
+  profilePic
+) {
+  const response = await fetch(`${API_URL}/users`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name, userName, password, email, profilePic }),
+  });
+
+  const data = response.json();
+  return { data };
+}

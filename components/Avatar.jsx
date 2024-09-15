@@ -27,7 +27,11 @@ export default function Avatar({ user }) {
           <span className="border-b-[1px] text-[#404040]  border-[#d4d4d4] pb-3">
             {email}
           </span>
-          <SecondaryButton text="Create Post" underline={true} href="/" />
+          <SecondaryButton
+            text="Create Post"
+            underline={true}
+            href="/publications/create"
+          />
           <hr />
           <SecondaryButton text="Sign Out" underline={true} href="signout" />
         </div>
