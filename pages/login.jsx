@@ -48,7 +48,7 @@ export default function Login({ isCreateUser }) {
     if (token) {
       router.push("/");
     }
-  }, []);
+  }, [router]);
 
   return (
     <main className="mt-10 mb-12 max-w-[544px] p-4 sm:p-[0px] flex justify-center  flex-col items-center mx-auto pt-9">
