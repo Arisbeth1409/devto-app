@@ -31,91 +31,91 @@
         "text": "Home",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-home.svg"
+        "icon": "/icons/icon-home.svg"
       },
       {
         "text": "DEV ++",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-dev-plus.svg"
+        "icon": "/icons/icon-dev-plus.svg"
       },
       {
         "text": "Reading List",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-reading.svg"
+        "icon": "/icons/icon-reading.svg"
       },
       {
         "text": "Podcasts",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-podcast.svg"
+        "icon": "/icons/icon-podcast.svg"
       },
       {
         "text": "Videos",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-videos.svg"
+        "icon": "/icons/icon-videos.svg"
       },
       {
         "text": "Tags",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-tags.svg"
+        "icon": "/icons/icon-tags.svg"
       },
       {
         "text": "DEV Help",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-help.svg"
+        "icon": "/icons/icon-help.svg"
       },
       {
         "text": "Forem Shop",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-shop.svg"
+        "icon": "/icons/icon-shop.svg"
       },
       {
         "text": "Advertise on DEV",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-heart.svg"
+        "icon": "/icons/icon-heart.svg"
       },
       {
         "text": "DEV Challengues",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-challenge.svg"
+        "icon": "/icons/icon-challenge.svg"
       },
       {
         "text": "DEV Showcase",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-stars.svg"
+        "icon": "/icons/icon-stars.svg"
       },
       {
         "text": "About",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-devto.svg"
+        "icon": "/icons/icon-devto.svg"
       },
       {
         "text": "Contact",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-contact.svg"
+        "icon": "/icons/icon-contact.svg"
       },
       {
         "text": "Guides",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-book.svg"
+        "icon": "/icons/icon-book.svg"
       },
       {
         "text": "Software comparisons",
         "underline": true,
         "to": "/",
-        "icon": "icons/icon-software.svg"
+        "icon": "/icons/icon-software.svg"
       }
     ],
     "navButtonsOther": [

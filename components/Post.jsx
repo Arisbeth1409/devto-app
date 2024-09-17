@@ -16,7 +16,7 @@ export default function Post({
     <article className="bg-white border border-[#d4d4d4] rounded-[5px]">
       <a href={`${isDetailPost ? "" : `/publications/${id}`}`}>
         {(index === 0 || isDetailPost) && (
-          <img className="rounded-t-lg" src={image} alt="" />
+          <img className="rounded-t-lg w-[100%]" src={image} alt="" />
         )}
         <div className="p-[1.5rem]">
           <div className="flex gap-4 items-start">
@@ -38,7 +38,8 @@ export default function Post({
             className={clsx(
               `bold hover:text-[#3b49df] text-[30px] leading-[35px]`,
               {
-                "text-[50px] leading-[60px]": isDetailPost,
+                "text-[25px] leading-[40px] sm:text-[50px] sm:leading-[60px]":
+                  isDetailPost,
               }
             )}
           >

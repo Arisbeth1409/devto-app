@@ -7,6 +7,7 @@ import SocialNetworks from "@/components/SocialNetwork";
 import MyTags from "@/components/MyTags";
 import LoginNav from "@/components/LoginNav";
 import { useIsLoggedIn } from "@/hooks";
+import ActiveDiscussions from "@/components/ActiveDiscussions";
 
 export default function Home({ posts }) {
   const { isLoggedIn } = useIsLoggedIn();
@@ -21,7 +22,7 @@ export default function Home({ posts }) {
           <SocialNetworks />
           <MyTags />
         </aside>
-        <main className="basis-5/5 sm:basis-3/5 flex flex-col gap-2">
+        <main className="basis-5/5 md:basis-3/5 flex flex-col gap-2">
           {posts.map((post, index) => {
             return (
               <Post
@@ -37,7 +38,9 @@ export default function Home({ posts }) {
             );
           })}
         </main>
-        <aside className="basis-1/4 hidden sm:block">03</aside>
+        <aside className="basis-1/4 hidden md:block">
+          <ActiveDiscussions post={posts} />
+        </aside>
       </div>
     </MainLayout>
   );

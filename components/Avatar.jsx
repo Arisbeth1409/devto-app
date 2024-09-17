@@ -33,7 +33,7 @@ export default function Avatar({ user }) {
             href="/publications/create"
           />
           <hr />
-          <SecondaryButton text="Sign Out" underline={true} href="signout" />
+          <SecondaryButton text="Sign Out" underline={true} href="/signout" />
         </div>
       )}
     </>

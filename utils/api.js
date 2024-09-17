@@ -1,4 +1,5 @@
 const API_URL = "https://backend-challenge-h27z.onrender.com";
+//await fetch(`${API_URL}/users/auth/login`
 
 export async function login(email, password) {
   const response = await fetch(`${API_URL}/users/auth/login`, {
@@ -44,6 +45,20 @@ export async function userRegister(
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ name, userName, password, email, profilePic }),
+  });
+
+  const data = response.json();
+  return { data };
+}
+
+export async function createPost(body, image, title, user, token) {
+  const response = await fetch(`${API_URL}/posts`, {
+    method: "POST",
+    body: JSON.stringify({ body, image, title, user, token }),
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
   });
 
   const data = response.json();

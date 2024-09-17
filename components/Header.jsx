@@ -5,6 +5,8 @@ import Link from "next/link";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
 import UserComponent from "./UserComponent";
+import NavLinks from "./NavLinks";
+import LoginNav from "./LoginNav";
 
 import Image from "next/image";
 import logo from "@/public/devto_logo.png";
@@ -25,9 +27,37 @@ export default function Header() {
 
   return (
     <>
-      {menuMobile && <div>Mobile Menu</div>}
-      <header className="fixed top-0  flex pl-9 pr-9 items-center w-full h-[56px] bg-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.10)]">
-        <div className="w-full flex items-center gap-3">
+      {menuMobile && (
+        <nav className="w-[65%] h-[100%] bg-white z-[1] fixed overflow-y-auto p-4">
+          <div className="flex justify-between">
+            <h2 className="bold">DEV Community</h2>
+            <button
+              onClick={() => {
+                setMenuMobile(false);
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="mb-5 mt-4">{!isLoggedIn && <LoginNav />}</div>
+          <NavLinks navLinks={true} />
+        </nav>
+      )}
+      <header className="fixed top-0  flex p-2 pr-2 sm:pl-9 sm:pr-9 items-center w-full h-[56px] bg-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.10)]">
+        <div className="w-full basis-3/12 sm:basis-6/12 flex items-center gap-3">
           <button onClick={handeShowMenu} className="block md:hidden h-[56px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -103,16 +133,19 @@ export default function Header() {
             </div>
           </form>
         </div>
-        <div className="w-full flex items-center justify-end gap-2">
+        <div className="w-full basis-8/12 sm:basis-6/12 flex items-center justify-end gap-2">
           {isLoggedIn && (
             <>
-              <PrimaryButton
-                text="
+              <div className="hidden md:block">
+                <PrimaryButton
+                  text="
            Create post
          "
-                href="/publications/create"
-                underline={true}
-              />
+                  href="/publications/create"
+                  underline={true}
+                />
+              </div>
+
               <button>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

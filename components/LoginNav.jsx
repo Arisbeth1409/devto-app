@@ -3,13 +3,13 @@ import SecondaryButton from "./SecondaryButton";
 
 export default function LoginNav() {
   return (
-    <div className="flex flex-col gap-1 pl-9">
-      <div className="bg-white w-[300px] p-3 border border-[#d4d4d4] rounded-[5px] mb-5">
-        <h2 className="bold text-[21px] leading-[25px] w-[200px]">
+    <div className="flex flex-col gap-0 pl-0 sm:gap-1 sm:pl-9">
+      <div className="bg-white w-[100%] sm:w-[300px] p-3 border border-[#d4d4d4] rounded-[5px] mb-5 text-center sm:text-left">
+        <h2 className="bold text-[21px] leading-[25px] w-[100%] sm:w-[200px]">
           {" "}
           DEV Community is a community of 2,039,945 amazing developers
         </h2>
-        <p className="text-[#575757] mt-4 w-[220px]">
+        <p className="text-[#575757] mt-4 w-[100%] sm:w-[200px]">
           We're a place where coders share, stay up-to-date and grow their
           careers.
         </p>

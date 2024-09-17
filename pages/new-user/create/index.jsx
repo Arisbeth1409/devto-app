@@ -49,7 +49,7 @@ export default function CreateUser() {
           message: "Invalid data",
         });
         setIsSubmitting(false);
-      } catch {
+      } catch (error) {
         console.error("login", error);
         setIsSubmitting(false);
       }

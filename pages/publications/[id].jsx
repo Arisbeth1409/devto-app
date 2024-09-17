@@ -4,6 +4,7 @@ import MainLayout from "@/Layouts/MainLayout";
 import { getPost } from "@/utils/api";
 
 import Post from "@/components/Post";
+import UserCard from "@/components/UserCard";
 
 export default function PostList() {
   const [post, setPost] = useState({});
@@ -21,11 +22,10 @@ export default function PostList() {
       });
   }, [id]);
 
-  console.log(post, "post");
   return (
     <MainLayout>
       <div className="flex justify-center flex-col sm:flex-row w-full pt-[75px] gap-3">
-        <aside className="basis-1/12 hidden md:block">01</aside>
+        <aside className="basis-1/12 hidden md:block"></aside>
         <main className="basis-8/12 sm:basis-3/5 flex flex-col gap-2">
           <Post
             isDetailPost={true}
@@ -36,7 +36,13 @@ export default function PostList() {
             body={post.body}
           />
         </main>
-        <aside className="basis-3/12">03</aside>
+        <aside className="basis-3/12">
+          <UserCard
+            profilePic={post.user?.profilePic}
+            userName={post.user?.userName}
+            email={post.user?.email}
+          />
+        </aside>
       </div>
     </MainLayout>
   );
