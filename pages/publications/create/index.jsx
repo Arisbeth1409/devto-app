@@ -294,7 +294,7 @@ export default function NewPost() {
               or local communities.
             </li>
             <li className="text-[#575757] mb-2">
-              Ask people to leave questions for you in the comments. It's a
+              Ask people to leave questions for you in the comments. It&#39;s a
               great way to spark additional discussion describing personally why
               you wrote it or why people might find it helpful.
             </li>

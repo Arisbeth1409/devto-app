@@ -10,7 +10,7 @@ export default function LoginNav() {
           DEV Community is a community of 2,039,945 amazing developers
         </h2>
         <p className="text-[#575757] mt-4 w-[100%] sm:w-[200px]">
-          We're a place where coders share, stay up-to-date and grow their
+          We&#39;re a place where coders share, stay up-to-date and grow their
           careers.
         </p>
         <div className="mt-6 flex flex-col gap-3 w-full text-center">
